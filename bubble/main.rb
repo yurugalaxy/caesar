@@ -1,8 +1,8 @@
+# frozen_string_literal: true
+
 require 'pry-byebug'
 
 def bubble_sort(array)
-        min = 0
-        max = 0
         length = array.length
 
         loop do

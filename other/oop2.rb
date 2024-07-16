@@ -1,10 +1,11 @@
-class Vehicle
+# frozen_string_literal: true
 
-        @@numCars = 0
-        @@numTrucks = 0
+class Vehicle
+        @@num_cars = 0
+        @@num_trucks = 0
 
         attr_reader :year, :colour, :make, :model
-        
+
         def initialize(year, colour, make, model)
                 @year = year
                 @colour = colour
@@ -18,11 +19,11 @@ class Vehicle
         end
 
         def self.garage
-                puts "You have #{@@numCars}"\
-                " car#{@@numCars == 1 ? '' : 's'}" \
-                " and #{@@numTrucks}"\
-                " truck#{@@numTrucks == 1 ? '' : 's'}" \
-                " in your garage."
+                puts "You have #{@@num_cars}"\
+                " car#{@@num_cars == 1 ? '' : 's'}" \
+                " and #{@@num_trucks}"\
+                " truck#{@@num_trucks == 1 ? '' : 's'}" \
+                ' in your garage.'
         end
 
         def age
@@ -39,14 +40,14 @@ end
 class Car < Vehicle
         def initialize(year, colour, make, model)
                 super(year, colour, make, model)
-                @@numCars += 1
+                @@num_cars += 1
         end
 end
 
 class Truck < Vehicle
         def initialize(year, colour, make, model)
                 super(year, colour, make, model)
-                @@numTrucks += 1
+                @@num_trucks += 1
         end
 end
 
